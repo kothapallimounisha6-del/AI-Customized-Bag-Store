@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f3ed" />
+    <meta name="description" content="Design a bag that feels like yours. Choose the shape, color, material, pattern, and budget." />
+    <title>Atelier Form — Make it yours</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="wordmark" href="#top" aria-label="Atelier Form home"><span class="mark" aria-hidden="true">a.</span><span>atelier <b>form</b></span></a>
+        <div class="topbar-note"><span class="status-dot"></span> MADE TO YOUR SPEC</div>
+        <button class="saved-count" id="saved-count" type="button" aria-label="Saved designs">♡ <span>0 saved</span></button>
+      </header>
+
+      <main id="top">
+        <section class="intro">
+          <div>
+            <p class="eyebrow">YOUR DESIGN, YOUR EVERYDAY</p>
+            <h1>A bag that feels <em>like you.</em></h1>
+            <p class="intro-copy">Choose your shape, find your colors, and make the details yours. Your estimate updates as you go.</p>
+          </div>
+          <div class="step-mark" aria-label="Design studio"><span>01</span><i></i><span>DESIGN STUDIO</span></div>
+        </section>
+
+        <div class="studio-layout">
+          <section class="builder" aria-label="Customize your bag">
+            <section class="form-section" aria-labelledby="shape-heading">
+              <div class="section-heading"><span class="section-number">01</span><div><h2 id="shape-heading">Start with a shape</h2><p>Choose the silhouette that fits your day.</p></div></div>
+              <div class="choice-grid shape-grid" role="group" aria-label="Bag type">
+                <button class="choice-card selected" type="button" data-option="type" data-value="tote" aria-pressed="true"><span class="shape-icon shape-tote" aria-hidden="true"></span><span><b>Everyday tote</b><small>Room for everything</small></span><i>+$0</i></button>
+                <button class="choice-card" type="button" data-option="type" data-value="crossbody" aria-pressed="false"><span class="shape-icon shape-crossbody" aria-hidden="true"></span><span><b>Crossbody</b><small>Hands-free and easy</small></span><i>+$16</i></button>
+                <button class="choice-card" type="button" data-option="type" data-value="shoulder" aria-pressed="false"><span class="shape-icon shape-shoulder" aria-hidden="true"></span><span><b>Shoulder bag</b><small>A little more polished</small></span><i>+$12</i></button>
+              </div>
+            </section>
+
+            <section class="form-section" aria-labelledby="color-heading">
+              <div class="section-heading"><span class="section-number">02</span><div><h2 id="color-heading">Pick your color</h2><p>Grounded neutrals or a little color.</p></div><span class="selected-value" id="color-label">Moss</span></div>
+              <div class="swatch-row" role="group" aria-label="Bag color">
+                <button class="swatch selected" type="button" data-option="color" data-value="moss" aria-label="Moss green" aria-pressed="true" style="--swatch:#627861"></button>
+                <button class="swatch" type="button" data-option="color" data-value="ink" aria-label="Ink black" aria-pressed="false" style="--swatch:#343b3b"></button>
+                <button class="swatch" type="button" data-option="color" data-value="clay" aria-label="Warm clay" aria-pressed="false" style="--swatch:#bd735b"></button>
+                <button class="swatch" type="button" data-option="color" data-value="butter" aria-label="Butter yellow" aria-pressed="false" style="--swatch:#e7c779"></button>
+                <button class="swatch" type="button" data-option="color" data-value="berry" aria-label="Deep berry" aria-pressed="false" style="--swatch:#814c5a"></button>
+                <button class="swatch" type="button" data-option="color" data-value="natural" aria-label="Natural canvas" aria-pressed="false" style="--swatch:#d7c8a9"></button>
+              </div>
+            </section>
+
+            <section class="form-section compact-section" aria-labelledby="size-heading">
+              <div class="section-heading"><span class="section-number">03</span><div><h2 id="size-heading">Find your size</h2><p>Room for the things you carry.</p></div></div>
+              <div class="segmented" role="group" aria-label="Bag size">
+                <button type="button" data-option="size" data-value="small" aria-pressed="false"><b>Small</b><small>Essentials</small></button>
+                <button class="selected" type="button" data-option="size" data-value="medium" aria-pressed="true"><b>Medium</b><small>Everyday</small></button>
+                <button type="button" data-option="size" data-value="large" aria-pressed="false"><b>Large</b><small>More room</small></button>
+              </div>
+            </section>
+
+            <section class="form-section" aria-labelledby="material-heading">
+              <div class="section-heading"><span class="section-number">04</span><div><h2 id="material-heading">Choose a material</h2><p>Each one has its own feel and finish.</p></div></div>
+              <div class="material-list" role="group" aria-label="Bag material">
+                <button class="material-option selected" type="button" data-option="material" data-value="canvas" aria-pressed="true"><span class="material-sample canvas-sample"></span><span><b>Organic canvas</b><small>Lightweight · easygoing</small></span><i>Included</i><span class="radio-mark"></span></button>
+                <button class="material-option" type="button" data-option="material" data-value="nylon" aria-pressed="false"><span class="material-sample nylon-sample"></span><span><b>Recycled nylon</b><small>Light · water resistant</small></span><i>+$8</i><span class="radio-mark"></span></button>
+                <button class="material-option" type="button" data-option="material" data-value="vegan" aria-pressed="false"><span class="material-sample vegan-sample"></span><span><b>Vegan leather</b><small>Structured · smooth</small></span><i>+$26</i><span class="radio-mark"></span></button>
+                <button class="material-option" type="button" data-option="material" data-value="leather" aria-pressed="false"><span class="material-sample leather-sample"></span><span><b>Full-grain leather</b><small>Natural · made to age</small></span><i>+$52</i><span class="radio-mark"></span></button>
+              </div>
+            </section>
+
+            <section class="form-section" aria-labelledby="pattern-heading">
+              <div class="section-heading"><span class="section-number">05</span><div><h2 id="pattern-heading">Make it yours</h2><p>A little detail changes everything.</p></div></div>
+              <div class="pattern-grid" role="group" aria-label="Bag pattern">
+                <button class="pattern-option selected" type="button" data-option="pattern" data-value="solid" aria-pressed="true"><span class="pattern-art pattern-solid"></span><b>Just the color</b><small>Clean and simple</small></button>
+                <button class="pattern-option" type="button" data-option="pattern" data-value="botanical" aria-pressed="false"><span class="pattern-art pattern-botanical"></span><b>Botanical</b><small>Soft, leafy detail</small></button>
+                <button class="pattern-option" type="button" data-option="pattern" data-value="stripe" aria-pressed="false"><span class="pattern-art pattern-stripe"></span><b>Fine stripe</b><small>A little structure</small></button>
+                <button class="pattern-option" type="button" data-option="pattern" data-value="colorblock" aria-pressed="false"><span class="pattern-art pattern-colorblock"></span><b>Color block</b><small>Playful contrast</small></button>
+              </div>
+            </section>
+
+            <section class="form-section style-budget">
+              <div class="style-block">
+                <div class="section-heading"><span class="section-number">06</span><div><h2 id="style-heading">Your style</h2><p>What should it feel like?</p></div></div>
+                <label class="sr-only" for="style-select">Choose your style</label>
+                <select id="style-select" class="style-select">
+                  <option value="easy">Easy &amp; understated</option>
+                  <option value="bold">Bright &amp; expressive</option>
+                  <option value="classic">Classic &amp; considered</option>
+                  <option value="outdoors">Ready for the outdoors</option>
+                </select>
+              </div>
+              <div class="budget-block">
+                <div class="section-heading"><span class="section-number">07</span><div><h2 id="budget-heading">Set your budget</h2><p>We'll keep the estimate in view.</p></div><strong class="budget-amount" id="budget-amount">$150</strong></div>
+                <label class="sr-only" for="budget-slider">Maximum budget in dollars</label>
+                <input id="budget-slider" class="budget-slider" type="range" min="50" max="300" step="10" value="150" />
+                <div class="range-labels"><span>$50</span><span>$300</span></div>
+              </div>
+            </section>
+          </section>
+
+          <aside class="preview-column" aria-label="Your bag preview and estimate">
+            <section class="preview-card">
+              <div class="preview-topline"><span>LIVE PREVIEW</span><span><i></i> YOUR DESIGN</span></div>
+              <div class="bag-stage">
+                <span class="stage-index">AF / 01</span>
+                <svg id="bag-art" viewBox="0 0 520 430" role="img" aria-labelledby="bag-svg-title bag-svg-desc">
+                  <title id="bag-svg-title">Your custom everyday tote</title>
+                  <desc id="bag-svg-desc">A medium moss green canvas tote with a clean solid finish.</desc>
+                  <defs>
+                    <filter id="bag-shadow" x="-40%" y="-30%" width="180%" height="190%"><feGaussianBlur in="SourceAlpha" stdDeviation="12"/><feOffset dy="12"/><feComponentTransfer><feFuncA type="linear" slope=".22"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <clipPath id="bag-clip"><path id="bag-clip-path" d="M155 146 Q155 137 166 137 H354 Q365 137 365 148 L383 354 Q384 366 371 366 H149 Q136 366 137 354 Z"/></clipPath>
+                    <pattern id="stripe-pattern" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M5 0V22" stroke="#fff8e7" stroke-opacity=".45" stroke-width="5"/></pattern>
+                    <pattern id="leaf-pattern" width="62" height="58" patternUnits="userSpaceOnUse"><path d="M14 38C14 22 26 14 39 12C38 26 29 37 14 38ZM14 38C11 27 7 22 3 19M14 38L28 23" fill="none" stroke="#fff8e7" stroke-opacity=".55" stroke-width="2.2" stroke-linecap="round"/><path d="M45 54C45 43 52 38 60 37C58 47 53 53 45 54Z" fill="#fff8e7" fill-opacity=".3"/></pattern>
+                  </defs>
+                  <ellipse cx="260" cy="377" rx="134" ry="17" fill="#564b3e" opacity=".15"/>
+                  <g id="bag-handle" filter="url(#bag-shadow)"><path d="M199 150C199 70 218 50 260 50S321 70 321 150" fill="none" stroke="#455b47" stroke-width="20" stroke-linecap="round"/><path d="M199 150C199 70 218 50 260 50S321 70 321 150" fill="none" stroke="#a6ab92" stroke-opacity=".32" stroke-width="2" stroke-dasharray="4 5"/></g>
+                  <g filter="url(#bag-shadow)">
+                    <path id="bag-body" d="M155 146 Q155 137 166 137 H354 Q365 137 365 148 L383 354 Q384 366 371 366 H149 Q136 366 137 354 Z" fill="#627861"/>
+                    <g clip-path="url(#bag-clip)"><rect id="pattern-overlay" x="120" y="120" width="280" height="270" fill="transparent"/><path id="colorblock-overlay" d="M130 278 Q260 238 390 278 V390 H130Z" fill="#f0d59b" opacity="0"/></g>
+                    <path id="bag-seam" d="M155 156 Q260 163 365 156" fill="none" stroke="#fff8e7" stroke-opacity=".35" stroke-width="2"/>
+                    <path id="pocket-outline" d="M199 267 Q199 262 205 262 H316 Q322 262 322 268 V335 H199Z" fill="none" stroke="#fff8e7" stroke-opacity=".4" stroke-width="2"/>
+                    <path d="M244 185h32" stroke="#fff8e7" stroke-opacity=".55" stroke-width="3" stroke-linecap="round"/>
+                    <circle cx="260" cy="190" r="3" fill="#edc887"/>
+                  </g>
+                  <g id="style-detail" fill="none" stroke="#edc887" stroke-width="3"><path d="M163 147v18M357 147v18"/></g>
+                </svg>
+                <span class="stage-caption">OBJECT NO. 001 <i>·</i> MADE BY YOU</span>
+              </div>
+              <div class="preview-caption"><div><p class="eyebrow">YOUR BAG</p><h2 id="design-name">The Moss Everyday Tote</h2></div><span class="size-tag" id="size-tag">MEDIUM</span></div>
+              <div class="design-tags" id="design-tags"><span>Organic canvas</span><span>Solid</span><span>Easy &amp; understated</span></div>
+            </section>
+
+            <section class="estimate-card" aria-live="polite">
+              <div class="estimate-heading"><div><p class="eyebrow">A CLEAR ESTIMATE</p><h2>Your design, priced.</h2></div><span class="estimate-stamp">EST.<br />2026</span></div>
+              <div class="price-lines" id="price-lines"></div>
+              <div class="price-total"><span>Estimated total</span><strong id="total-price">$64</strong></div>
+              <div class="budget-status within" id="budget-status"><span class="budget-icon">✓</span><span id="budget-message">Within your $150 budget</span><span class="budget-remain" id="budget-remaining">$86 left</span></div>
+              <button class="save-button" id="save-design" type="button"><span>Save this design</span><span aria-hidden="true">↗</span></button>
+              <button class="reset-button" id="reset-design" type="button">Start over</button>
+              <p class="estimate-note">Estimate only. Final price may vary slightly with construction details.</p>
+            </section>
+            <p class="preview-footer"><span>ATELIER FORM</span><span>THOUGHTFULLY MADE, PERSONALLY YOURS</span></p>
+          </aside>
+        </div>
+      </main>
+
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+      <footer class="page-footer"><span>Atelier Form <i>·</i> A little more personal.</span><span>Thoughtful materials. Considered details.</span></footer>
+    </div>
+    <script src="app.js"></script>
+    <script src="chat.js"></script>
+  </body>
+</html>
